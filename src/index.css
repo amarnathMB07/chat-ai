@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg-primary: rgba(52, 53, 65, 0.75);
+  --bg-secondary: rgba(68, 70, 84, 0.75);
+  --bg-sidebar: rgba(32, 33, 35, 0.85);
+  --text-primary: #ECECF1;
+  --text-secondary: #C5C5D2;
+  --border-color: rgba(77, 77, 79, 0.5);
+  --accent-color: #10A37F;
+  --hover-bg: rgba(42, 43, 50, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #343541;
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root > div {
+  backdrop-filter: blur(8px);
+}
+
+#root {
+  height: 100%;
+}
+
+.markdown-body {
+  color: var(--text-primary);
+}
+
+.markdown-body p {
+  margin-bottom: 1rem;
+}
+
+.markdown-body pre {
+  background-color: #0d0d0d;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.markdown-body code {
+  font-family: monospace;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #565869;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
