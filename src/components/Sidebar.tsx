@@ -1,6 +1,6 @@
 import { MessageSquare, Plus, PanelLeftClose } from 'lucide-react';
 
-export function Sidebar({ onClose }: { onClose: () => void }) {
+export function Sidebar({ onClose, onNewChat }: { onClose: () => void, onNewChat: () => void }) {
   return (
     <div style={{
       width: '260px',
@@ -12,7 +12,7 @@ export function Sidebar({ onClose }: { onClose: () => void }) {
       color: 'var(--text-primary)'
     }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-        <button style={{
+        <button onClick={onNewChat} style={{
           display: 'flex',
           alignItems: 'center',
           gap: '0.5rem',
